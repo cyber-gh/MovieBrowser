@@ -23,6 +23,7 @@ class AppClient {
         return imagesLocation + partialPath
     }
 
+    @discardableResult
     func getImage(imagePath: String, completionHandler: @escaping (Result<Data, Error>) -> Void) -> URLSessionTask {
         let task = URLSession.shared.dataTask(with: URL(string: imagesLocation + imagePath)!) { (data, response, error) in
             guard let data = data else { return}
@@ -48,7 +49,7 @@ class AppClient {
         return URL(string: str )!
     }
 
-
+    @discardableResult
     func getLatestMovie(completionHandler: @escaping  (Result<Movie, Error>) -> Void) -> URLSessionTask {
         let task = URLSession.shared.dataTask(with: urlBuilder(endPoints: ["movie", "latest"])) { (data, response, error) in
             guard let data = data else {
@@ -70,7 +71,7 @@ class AppClient {
 
         return task
     }
-
+    @discardableResult
     func getMovieImagePath(movieId: Int, completionHandler: @escaping (Result<MovieImage, Error>) -> Void) -> URLSessionTask {
         let task = URLSession.shared.dataTask(with: urlBuilder(endPoints: ["movie", movieId.toString(), "images"])) {data,response,error in
             guard  let data = data else {
@@ -93,6 +94,7 @@ class AppClient {
         return  task
     }
 
+    @discardableResult
     func getPopularMovies(page: Int = 1, completionHandler: @escaping (Result<PopularMoviesResult, Error> ) -> Void) -> URLSessionTask {
         let task = URLSession.shared.dataTask(with: urlBuilder(endPoints: ["movie", "popular"], params: ["page" : page.toString()])) { data, response, error in
             guard let data = data else {

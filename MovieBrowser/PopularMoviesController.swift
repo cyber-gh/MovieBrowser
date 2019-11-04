@@ -42,6 +42,7 @@ class PopularMoviesViewController : UIViewController {
     let cellIdentifier = "popularMovieCell"
     var flowLayout : ZoomAndSnapFlowLayout!
 
+    @IBOutlet weak var currentMovieNameLbl: UILabel!
     var spinnner: SpinnerViewController? = nil
 
     @IBOutlet weak var collectionView: UICollectionView!
@@ -57,9 +58,16 @@ class PopularMoviesViewController : UIViewController {
 
     private func initCollectionView() {
         collectionView.dataSource = self
-        flowLayout = ZoomAndSnapFlowLayout(itemSize: CGSize(width: collectionView.frame.width * 0.8, height: collectionView.frame.height * 0.75))
+        flowLayout = ZoomAndSnapFlowLayout(itemSize: CGSize(width: collectionView.frame.width * 0.5, height: collectionView.frame.height * 0.75))
         collectionView.collectionViewLayout = flowLayout
         collectionView.contentInsetAdjustmentBehavior = .always
+        collectionView.delegate = self
+    }
+
+    private func updateMovieLabel(currentItemIndex indexPath: IndexPath?) {
+        guard let indexPath = indexPath else {return }
+        
+        currentMovieNameLbl.text = viewModel.data[indexPath.row].title
     }
 }
 
@@ -170,5 +178,32 @@ extension PopularMoviesViewController : UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath) as! PopularMovieCell
         cell.setContent(movieData: viewModel.data[indexPath.row])
         return cell
+    }
+}
+
+extension PopularMoviesViewController : UICollectionViewDelegate {
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+//        if (collectionView.visibleCells.count == 2) {
+//            let indexPath = collectionView.indexPath(for: collectionView.visibleCells[0])
+//            self.updateMovieLabel(currentItemIndex: indexPath)
+//        }
+//        if (collectionView.visibleCells.count == 3) {
+//            let indexPath = collectionView.indexPath(for: collectionView.visibleCells[1])
+//            self.updateMovieLabel(currentItemIndex: indexPath)
+//        }
+
+
+        let visibleRect = CGRect(origin: collectionView.contentOffset, size: collectionView.bounds.size)
+        let visiblePoint = CGPoint(x: visibleRect.midX, y: visibleRect.midY)
+        let visibleIndexPath = collectionView.indexPathForItem(at: visiblePoint)
+        self.updateMovieLabel(currentItemIndex: visibleIndexPath)
+
+    }
+
+    public func scrollViewDidChangeAdjustedContentInset(_ scrollView: UIScrollView) {
+        let visibleRect = CGRect(origin: collectionView.contentOffset, size: collectionView.bounds.size)
+        let visiblePoint = CGPoint(x: visibleRect.midX, y: visibleRect.midY)
+        let visibleIndexPath = collectionView.indexPathForItem(at: visiblePoint)
+        self.updateMovieLabel(currentItemIndex: visibleIndexPath)
     }
 }
