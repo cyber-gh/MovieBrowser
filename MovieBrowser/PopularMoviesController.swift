@@ -188,28 +188,10 @@ extension PopularMoviesViewController : UICollectionViewDataSource {
 
 extension PopularMoviesViewController : UICollectionViewDelegate {
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-//        if (collectionView.visibleCells.count == 2) {
-//            let indexPath = collectionView.indexPath(for: collectionView.visibleCells[0])
-//            self.updateMovieLabel(currentItemIndex: indexPath)
-//        }
-//        if (collectionView.visibleCells.count == 3) {
-//            let indexPath = collectionView.indexPath(for: collectionView.visibleCells[1])
-//            self.updateMovieLabel(currentItemIndex: indexPath)
-//        }
-
-
         let visibleRect = CGRect(origin: collectionView.contentOffset, size: collectionView.bounds.size)
         let visiblePoint = CGPoint(x: visibleRect.midX, y: visibleRect.midY)
         let visibleIndexPath = collectionView.indexPathForItem(at: visiblePoint)
         self.updateMovieLabel(currentItemIndex: visibleIndexPath)
 
     }
-
-    public func scrollViewDidChangeAdjustedContentInset(_ scrollView: UIScrollView) {
-        let visibleRect = CGRect(origin: collectionView.contentOffset, size: collectionView.bounds.size)
-        let visiblePoint = CGPoint(x: visibleRect.midX, y: visibleRect.midY)
-        let visibleIndexPath = collectionView.indexPathForItem(at: visiblePoint)
-        self.updateMovieLabel(currentItemIndex: visibleIndexPath)
-    }
-
 }
