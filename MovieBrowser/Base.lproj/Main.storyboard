@@ -88,6 +88,17 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="b57-cL-Pwf">
+                                <rect key="frame" x="20" y="606" width="374" height="125"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="125" id="ymj-wu-CEV"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -96,6 +107,9 @@
                             <constraint firstItem="dST-FE-qf6" firstAttribute="top" secondItem="y1X-ps-V4S" secondAttribute="bottom" constant="22" id="865-Sm-TZx"/>
                             <constraint firstItem="xMU-w3-OZr" firstAttribute="top" secondItem="dST-FE-qf6" secondAttribute="bottom" constant="40" id="Bt4-pD-Qkn"/>
                             <constraint firstItem="y1X-ps-V4S" firstAttribute="centerX" secondItem="CfE-h7-G5A" secondAttribute="centerX" id="N4O-ic-Jsr"/>
+                            <constraint firstItem="b57-cL-Pwf" firstAttribute="leading" secondItem="CfE-h7-G5A" secondAttribute="leading" constant="20" id="PCM-ii-Yeu"/>
+                            <constraint firstItem="b57-cL-Pwf" firstAttribute="top" secondItem="xMU-w3-OZr" secondAttribute="bottom" constant="17" id="R4t-SD-j32"/>
+                            <constraint firstItem="CfE-h7-G5A" firstAttribute="trailing" secondItem="b57-cL-Pwf" secondAttribute="trailing" constant="20" id="XY5-WS-7TG"/>
                             <constraint firstItem="dST-FE-qf6" firstAttribute="leading" secondItem="CfE-h7-G5A" secondAttribute="leading" id="laK-V1-owE"/>
                             <constraint firstItem="y1X-ps-V4S" firstAttribute="top" secondItem="CfE-h7-G5A" secondAttribute="top" constant="32" id="qL0-dk-zgy"/>
                         </constraints>
@@ -104,6 +118,7 @@
                     <connections>
                         <outlet property="collectionView" destination="dST-FE-qf6" id="SkY-as-vfT"/>
                         <outlet property="currentMovieNameLbl" destination="xMU-w3-OZr" id="yDx-Gs-CtR"/>
+                        <outlet property="currentMoviewOverview" destination="b57-cL-Pwf" id="pxF-oa-AsH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="adA-5J-YEc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

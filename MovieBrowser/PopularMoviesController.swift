@@ -45,6 +45,7 @@ class PopularMoviesViewController : UIViewController {
     @IBOutlet weak var currentMovieNameLbl: UILabel!
     var spinnner: SpinnerViewController? = nil
 
+    @IBOutlet weak var currentMoviewOverview: UITextView!
     @IBOutlet weak var collectionView: UICollectionView!
     
     override func viewDidLoad() {
@@ -62,12 +63,15 @@ class PopularMoviesViewController : UIViewController {
         collectionView.collectionViewLayout = flowLayout
         collectionView.contentInsetAdjustmentBehavior = .always
         collectionView.delegate = self
+
     }
 
     private func updateMovieLabel(currentItemIndex indexPath: IndexPath?) {
         guard let indexPath = indexPath else {return }
         
         currentMovieNameLbl.text = viewModel.data[indexPath.row].title
+        currentMoviewOverview.text = viewModel.data[indexPath.row].overview
+        
     }
 }
 
@@ -77,6 +81,7 @@ extension PopularMoviesViewController : DataStateListener {
             self?.removeSpinner(spinner: self?.spinnner)
             self?.spinnner = nil
             self?.collectionView.reloadData()
+            self?.updateMovieLabel(currentItemIndex: IndexPath(row: 0, section: 0))
         }
 
     }
@@ -206,4 +211,5 @@ extension PopularMoviesViewController : UICollectionViewDelegate {
         let visibleIndexPath = collectionView.indexPathForItem(at: visiblePoint)
         self.updateMovieLabel(currentItemIndex: visibleIndexPath)
     }
+
 }
