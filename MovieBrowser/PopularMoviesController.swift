@@ -59,7 +59,7 @@ class PopularMoviesViewController : UIViewController {
 
     private func initCollectionView() {
         collectionView.dataSource = self
-        flowLayout = ZoomAndSnapFlowLayout(itemSize: CGSize(width: collectionView.frame.width * 0.5, height: collectionView.frame.height * 0.75))
+        flowLayout = ZoomAndSnapFlowLayout(itemSize: CGSize(width: collectionView.frame.width * 0.45, height: collectionView.frame.height * 0.75))
         collectionView.collectionViewLayout = flowLayout
         collectionView.contentInsetAdjustmentBehavior = .always
         collectionView.delegate = self

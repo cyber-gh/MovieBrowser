@@ -261,6 +261,11 @@
 			isa = PBXProject;
 			attributes = {
 				ORGANIZATIONNAME = personal;
+				TargetAttributes = {
+					CA8C5EE75C468B40F349CC2F = {
+						DevelopmentTeam = BSD56V25PP;
+					};
+				};
 			};
 			buildConfigurationList = CA8C56B6E185B32B722E191C /* Build configuration list for PBXProject "MovieBrowser" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -452,6 +457,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = BSD56V25PP;
 				INFOPLIST_FILE = MovieBrowser/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -540,6 +546,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = BSD56V25PP;
 				INFOPLIST_FILE = MovieBrowser/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
