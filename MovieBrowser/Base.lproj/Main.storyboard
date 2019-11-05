@@ -117,16 +117,16 @@
                                 </attributedString>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZZE-c6-vwq">
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ZZE-c6-vwq" customClass="StarRatingView" customModule="MovieBrowser" customModuleProvider="target">
                                 <rect key="frame" x="116" y="601" width="278" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="alY-XN-sNK"/>
+                                    <constraint firstAttribute="width" constant="150" id="smz-vg-8eP"/>
                                 </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="ZZE-c6-vwq" firstAttribute="leading" secondItem="CfE-h7-G5A" secondAttribute="leading" constant="116" id="0L8-Jl-voV"/>
                             <constraint firstItem="b57-cL-Pwf" firstAttribute="top" secondItem="ZZE-c6-vwq" secondAttribute="bottom" constant="17" id="6KL-4l-y6N"/>
                             <constraint firstItem="xMU-w3-OZr" firstAttribute="centerX" secondItem="dST-FE-qf6" secondAttribute="centerX" id="7PB-O6-lb7"/>
                             <constraint firstItem="CfE-h7-G5A" firstAttribute="trailing" secondItem="dST-FE-qf6" secondAttribute="trailing" id="7gS-LR-fvH"/>
