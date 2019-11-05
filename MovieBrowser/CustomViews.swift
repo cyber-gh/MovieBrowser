@@ -36,10 +36,21 @@ class StarRatingView : UIStackView {
         }
     }
 
-//    func setRating(rating: Double = 10.0) {
-//        var ratio = rating / 2
-//        for imgView in starViews {
-//            imgView.image
-//        }
-//    }
+    func setRating(rating: Double = 10.0) {
+        var ratio = rating / 2
+        for imgView in self.subviews {
+            if let imgView = imgView as? UIImageView {
+
+
+                var completionPercentage = 1.0
+                if (ratio <= 1) {
+                    completionPercentage = ratio
+                }
+                imgView.image = imgView.image?.colorImageByCompletion(completionPercentage: completionPercentage)
+                print(completionPercentage)
+                ratio -= 1
+                ratio = max(ratio, 0)
+            }
+        }
+    }
 }

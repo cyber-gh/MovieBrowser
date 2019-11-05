@@ -35,14 +35,13 @@ extension  UIImage {
         for row in 0 ..< Int(height) {
             for column in 0..<Int(width) {
                 let offset = row * width + column
-                print("pixel at \(row) \(column) ",pixelBuffer[offset])
                 if (pixelBuffer[offset].alphaComponent == 0) {
                     continue;
                 }
                 if (column < widthBreakpoint) {
-                    pixelBuffer[offset] = activeColor.toRGBA32()
+                    pixelBuffer[offset] = .blue
                 } else {
-                    pixelBuffer[offset] = backgroundColor.toRGBA32()
+                    pixelBuffer[offset] = .black
                 }
 
             }
@@ -55,9 +54,18 @@ extension  UIImage {
     }
 }
 
+extension Collection {
+
+    /// Returns the element at the specified index if it is within bounds, otherwise nil.
+    subscript (safe index: Index) -> Element? {
+        return indices.contains(index) ? self[index] : nil
+    }
+}
+
 extension UIColor {
     func toRGBA32() -> RGBA32 {
-        return RGBA32(red: UInt8(self.cgColor.components![0] * 255) , green:  UInt8(self.cgColor.components![1] * 255), blue:  UInt8(self.cgColor.components![2] * 255), alpha:  UInt8(self.cgColor.alpha  * 255))
+        
+        return RGBA32(red: UInt8(self.cgColor.components?[safe: 0] ?? 0.0 * 255) , green:  UInt8(self.cgColor.components?[safe: 1] ?? 0.0 * 255), blue:  UInt8(self.cgColor.components?[safe: 2] ?? 0.0 * 255), alpha:  UInt8(self.cgColor.alpha  * 255))
     }
 }
 

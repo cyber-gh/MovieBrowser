@@ -147,6 +147,7 @@
                         <outlet property="collectionView" destination="dST-FE-qf6" id="SkY-as-vfT"/>
                         <outlet property="currentMovieNameLbl" destination="xMU-w3-OZr" id="yDx-Gs-CtR"/>
                         <outlet property="currentMoviewOverview" destination="b57-cL-Pwf" id="pxF-oa-AsH"/>
+                        <outlet property="starRatingView" destination="ZZE-c6-vwq" id="ISC-S2-PjE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="adA-5J-YEc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

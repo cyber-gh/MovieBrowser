@@ -48,6 +48,8 @@ class PopularMoviesViewController : UIViewController {
     @IBOutlet weak var currentMoviewOverview: UITextView!
     @IBOutlet weak var collectionView: UICollectionView!
     
+    @IBOutlet weak var starRatingView: StarRatingView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         initCollectionView()
@@ -71,7 +73,7 @@ class PopularMoviesViewController : UIViewController {
         
         currentMovieNameLbl.text = viewModel.data[indexPath.row].title
         currentMoviewOverview.text = viewModel.data[indexPath.row].overview
-        
+        starRatingView.setRating(rating: viewModel.data[indexPath.row].voteAverage!)
     }
 }
 
