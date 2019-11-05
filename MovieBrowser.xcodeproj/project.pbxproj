@@ -17,6 +17,7 @@
 		CA8C57A2E93100F7D9773847 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA8C518E4FF72663BE39F959 /* LaunchScreen.storyboard */; };
 		CA8C588B0D468C392B402DE1 /* MovieImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8C54D6B0BC577CC35C2BC7 /* MovieImage.swift */; };
 		CA8C5A76B090E0D38A13B7B2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8C59802DB90475B54906BA /* SceneDelegate.swift */; };
+		CA8C5A8FE814F63B69D1117F /* ImageProcessing.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8C56F0FF5E27B78524EFDA /* ImageProcessing.swift */; };
 		CA8C5AB9AAEC6AA307799D0F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA8C5D54BA1CCB2286E57FE6 /* Main.storyboard */; };
 		CA8C5BF3B4BF3F54DD3C435B /* MovieBrowserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8C515149FFAD71472BAD3C /* MovieBrowserTests.swift */; };
 		CA8C5C07684C8F5237B6D0E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8C52EA25F2B647A4C772F1 /* AppDelegate.swift */; };
@@ -61,6 +62,7 @@
 		CA8C54D6B0BC577CC35C2BC7 /* MovieImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieImage.swift; sourceTree = "<group>"; };
 		CA8C565B7A09ACD1C3998C51 /* AppClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppClient.swift; sourceTree = "<group>"; };
 		CA8C56BB926F1482A207A162 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
+		CA8C56F0FF5E27B78524EFDA /* ImageProcessing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageProcessing.swift; sourceTree = "<group>"; };
 		CA8C57793B2F84B11E59C9E0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CA8C584628AA4C5C5FA6938B /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		CA8C59802DB90475B54906BA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 			children = (
 				CA8C535E938110D0D03BA195 /* SpinnerViewController.swift */,
 				CA8C5A56B8DD7DD2A53C0C37 /* TypeConverters.swift */,
+				CA8C56F0FF5E27B78524EFDA /* ImageProcessing.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -337,6 +340,7 @@
 				CA8C5EAB17B0663C768ABFBE /* SpinnerViewController.swift in Sources */,
 				CA8C5D7D9E22506CF0B56028 /* TypeConverters.swift in Sources */,
 				CA8C5F8374D3D8FD806BB13D /* CustomViews.swift in Sources */,
+				CA8C5A8FE814F63B69D1117F /* ImageProcessing.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

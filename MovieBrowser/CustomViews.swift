@@ -24,15 +24,22 @@ class StarRatingView : UIStackView {
     private func addStarViews() {
         for i in 0..<5 {
             let image = UIImage(named: "starIcon")!.withRenderingMode(.alwaysTemplate)
-
+            let transformedImage = image.colorImageByCompletion()
             let imageView = UIImageView()
             imageView.widthAnchor.constraint(equalToConstant: 25).isActive = true
             imageView.heightAnchor.constraint(equalToConstant: 25).isActive = true
             imageView.contentMode = .scaleAspectFit
 
-            imageView.image = image
+            imageView.image = transformedImage
             starViews.append(imageView)
             self.addArrangedSubview(imageView)
         }
     }
+
+//    func setRating(rating: Double = 10.0) {
+//        var ratio = rating / 2
+//        for imgView in starViews {
+//            imgView.image
+//        }
+//    }
 }
