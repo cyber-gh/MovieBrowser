@@ -8,7 +8,7 @@ import  UIKit
 
 
 extension  UIImage {
-    func colorImageByCompletion(completionPercentage : Double = 1, activeColor: UIColor = .systemBlue, backgroundColor : UIColor = .black) -> UIImage? {
+    func colorImageByCompletion(completionPercentage : Double = 1, activeColor: UIColor = .systemBlue, backgroundColor : UIColor = .gray) -> UIImage? {
         guard let inputCGIImage = self.cgImage, completionPercentage >= 0, completionPercentage <= 1 else { return nil }
         let colorSpace          = CGColorSpaceCreateDeviceRGB()
         let width               = inputCGIImage.width
@@ -39,9 +39,9 @@ extension  UIImage {
                     continue;
                 }
                 if (column < widthBreakpoint) {
-                    pixelBuffer[offset] = .blue
+                    pixelBuffer[offset] = activeColor.rgb()!
                 } else {
-                    pixelBuffer[offset] = .black
+                    pixelBuffer[offset] = backgroundColor.rgb()!
                 }
 
             }
@@ -63,9 +63,23 @@ extension Collection {
 }
 
 extension UIColor {
-    func toRGBA32() -> RGBA32 {
-        
-        return RGBA32(red: UInt8(self.cgColor.components?[safe: 0] ?? 0.0 * 255) , green:  UInt8(self.cgColor.components?[safe: 1] ?? 0.0 * 255), blue:  UInt8(self.cgColor.components?[safe: 2] ?? 0.0 * 255), alpha:  UInt8(self.cgColor.alpha  * 255))
+
+    func rgb() -> RGBA32? {
+        var fRed : CGFloat = 0
+        var fGreen : CGFloat = 0
+        var fBlue : CGFloat = 0
+        var fAlpha: CGFloat = 0
+        if self.getRed(&fRed, green: &fGreen, blue: &fBlue, alpha: &fAlpha) {
+            let iRed = Int(fRed * 255.0)
+            let iGreen = Int(fGreen * 255.0)
+            let iBlue = Int(fBlue * 255.0)
+            let iAlpha = Int(fAlpha * 255.0)
+
+            return RGBA32(red:UInt8(iRed), green:UInt8(iGreen), blue:UInt8(iBlue), alpha:UInt8(iAlpha))
+        } else {
+            // Could not extract RGBA components:
+            return nil
+        }
     }
 }
 
