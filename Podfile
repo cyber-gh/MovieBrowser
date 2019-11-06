@@ -7,7 +7,7 @@ target 'MovieBrowser' do
 
   # Pods for MovieBrowser
   pod "MaterialComponents"
-
+  pod "youtube-ios-player-helper", "~> 0.1.4"
   target 'MovieBrowserTests' do
     inherit! :search_paths
     # Pods for testing

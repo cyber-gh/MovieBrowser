@@ -21,6 +21,7 @@
 		CA8C57A2E93100F7D9773847 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA8C518E4FF72663BE39F959 /* LaunchScreen.storyboard */; };
 		CA8C58202397B801E3AFEF4B /* StartRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8C58B200BC8E8150101F69 /* StartRatingView.swift */; };
 		CA8C588B0D468C392B402DE1 /* MovieImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8C54D6B0BC577CC35C2BC7 /* MovieImage.swift */; };
+		CA8C5A71EBF32FF30B5E801F /* ZoonAndSnapFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8C5F950B418C2FD4AF0BA8 /* ZoonAndSnapFlow.swift */; };
 		CA8C5A76B090E0D38A13B7B2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8C59802DB90475B54906BA /* SceneDelegate.swift */; };
 		CA8C5A8FE814F63B69D1117F /* ImageProcessing.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8C56F0FF5E27B78524EFDA /* ImageProcessing.swift */; };
 		CA8C5AB9AAEC6AA307799D0F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA8C5D54BA1CCB2286E57FE6 /* Main.storyboard */; };
@@ -92,6 +93,7 @@
 		CA8C5D57EFD5F4422A4147D4 /* UITextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextView.swift; sourceTree = "<group>"; };
 		CA8C5DAE5413A8A684BD37D5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CA8C5EA352EC1557328150C0 /* NetworkErrors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkErrors.swift; sourceTree = "<group>"; };
+		CA8C5F950B418C2FD4AF0BA8 /* ZoonAndSnapFlow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZoonAndSnapFlow.swift; sourceTree = "<group>"; };
 		CA8C5FE31283E1370D178E10 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -220,6 +222,7 @@
 				CA8C5C98D0E06E09714CD9CF /* UILabel.swift */,
 				CA8C5D57EFD5F4422A4147D4 /* UITextView.swift */,
 				CA8C54783731DC542C8D7796 /* UIView.swift */,
+				CA8C5F950B418C2FD4AF0BA8 /* ZoonAndSnapFlow.swift */,
 			);
 			path = Animations;
 			sourceTree = "<group>";
@@ -416,6 +419,7 @@
 				"${BUILT_PRODUCTS_DIR}/MaterialComponents/MaterialComponents.framework",
 				"${BUILT_PRODUCTS_DIR}/MotionAnimator/MotionAnimator.framework",
 				"${BUILT_PRODUCTS_DIR}/MotionInterchange/MotionInterchange.framework",
+				"${BUILT_PRODUCTS_DIR}/youtube-ios-player-helper/youtube_ios_player_helper.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -424,6 +428,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MaterialComponents.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MotionAnimator.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MotionInterchange.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/youtube_ios_player_helper.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -464,6 +469,7 @@
 				"${BUILT_PRODUCTS_DIR}/MaterialComponents/MaterialComponents.framework",
 				"${BUILT_PRODUCTS_DIR}/MotionAnimator/MotionAnimator.framework",
 				"${BUILT_PRODUCTS_DIR}/MotionInterchange/MotionInterchange.framework",
+				"${BUILT_PRODUCTS_DIR}/youtube-ios-player-helper/youtube_ios_player_helper.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -472,6 +478,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MaterialComponents.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MotionAnimator.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MotionInterchange.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/youtube_ios_player_helper.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -548,6 +555,7 @@
 				CA8C5EBF948BE9652B9EBA41 /* UIView.swift in Sources */,
 				CA8C5CA07C75E2F71B8B1C91 /* Colors.swift in Sources */,
 				CA8C58202397B801E3AFEF4B /* StartRatingView.swift in Sources */,
+				CA8C5A71EBF32FF30B5E801F /* ZoonAndSnapFlow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
