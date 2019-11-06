@@ -7,7 +7,12 @@ import Foundation
 import UIKit
 
 extension UIView {
-    func makeChangeTransition() {
-
+    func animateTransition(transType : CATransitionType = .push, transSubtype : CATransitionSubtype? = .fromLeft) {
+        let animation = CATransition()
+        animation.timingFunction = CAMediaTimingFunction(name: .easeInEaseOut)
+        animation.type = transType
+        animation.subtype = transSubtype
+        animation.duration = 0.3
+        self.layer.add(animation, forKey: nil)
     }
 }
