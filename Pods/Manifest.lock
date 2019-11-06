@@ -652,9 +652,11 @@ PODS:
   - MotionAnimator (2.8.1):
     - MotionInterchange (~> 1.6)
   - MotionInterchange (1.6.0)
+  - YoutubePlayer-in-WKWebView (0.3.3)
 
 DEPENDENCIES:
   - MaterialComponents
+  - YoutubePlayer-in-WKWebView
 
 SPEC REPOS:
   trunk:
@@ -663,6 +665,7 @@ SPEC REPOS:
     - MDFTextAccessibility
     - MotionAnimator
     - MotionInterchange
+    - YoutubePlayer-in-WKWebView
 
 SPEC CHECKSUMS:
   MaterialComponents: 6b2eb24aa0c1d1a6453f05a6bbe3ed6c80843161
@@ -670,7 +673,8 @@ SPEC CHECKSUMS:
   MDFTextAccessibility: 85c09a1bd9c321f494348e632a25063bcda35a53
   MotionAnimator: ee16aa30567c5bae0fb2750c132915829cfaaf8a
   MotionInterchange: ead0e3ae1f3a5fb539e289debbc7ae036160a10d
+  YoutubePlayer-in-WKWebView: 7694e858c5c3472ed067d6fe34eb9b944845e63c
 
-PODFILE CHECKSUM: 86ccbc4f6dfbbfd58d3a6c3d0b9ba013f54ce362
+PODFILE CHECKSUM: b387a421d15071442b81ba2f4b74ab368cb0af82
 
 COCOAPODS: 1.8.4

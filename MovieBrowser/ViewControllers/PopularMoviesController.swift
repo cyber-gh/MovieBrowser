@@ -67,7 +67,17 @@ class PopularMoviesViewController : UIViewController {
         viewModel.dataLoadedListener = self
         spinnner = showSpinner()
         viewModel.loadData()
-        
+
+
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.openDetailsController))
+        currentMovieNameLbl.addGestureRecognizer(tapGesture)
+        currentMovieNameLbl.isUserInteractionEnabled = true
+
+    }
+
+    @objc func openDetailsController(sender: UITapGestureRecognizer) {
+        let detailsViewController = MoviesDetailsViewController()
+        self.present(detailsViewController, animated: true)
     }
 
     private func initCollectionView() {
