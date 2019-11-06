@@ -6,7 +6,8 @@
 import Foundation
 import UIKit
 
-extension UILabel {
+extension UITextView {
+    //TODO code duplication, implement a common transition funciton in uiview
     func setTextAnimated(newText : String?, transType : CATransitionType = .push, transSubtype : CATransitionSubtype? = .fromLeft) {
         guard let newText = newText else {return }
         let animation = CATransition()

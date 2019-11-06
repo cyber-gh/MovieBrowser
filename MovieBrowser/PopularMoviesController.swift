@@ -49,6 +49,7 @@ class PopularMoviesViewController : UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     
     @IBOutlet weak var starRatingView: StarRatingView!
+    var lastVelocityXSign = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -70,9 +71,17 @@ class PopularMoviesViewController : UIViewController {
 
     private func updateMovieLabel(currentItemIndex indexPath: IndexPath?) {
         guard let indexPath = indexPath else {return }
+        //scroll direction, adapt animations
+        var animationDirection : CATransitionSubtype? = nil
+        if (lastVelocityXSign < 0) {
+            animationDirection = .fromRight
+        } else if (lastVelocityXSign > 0){
+            animationDirection = .fromLeft
+
+        }
         
-        currentMovieNameLbl.setTextAnimated(newText: viewModel.data[indexPath.row].title)
-        currentMoviewOverview.text = viewModel.data[indexPath.row].overview
+        currentMovieNameLbl.setTextAnimated(newText: viewModel.data[indexPath.row].title, transType: .push, transSubtype: animationDirection)
+        currentMoviewOverview.setTextAnimated(newText: viewModel.data[indexPath.row].overview, transType: .reveal, transSubtype: animationDirection)
         starRatingView.setRating(rating: viewModel.data[indexPath.row].voteAverage!)
     }
 }
@@ -190,10 +199,20 @@ extension PopularMoviesViewController : UICollectionViewDataSource {
 
 extension PopularMoviesViewController : UICollectionViewDelegate {
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+
         let visibleRect = CGRect(origin: collectionView.contentOffset, size: collectionView.bounds.size)
         let visiblePoint = CGPoint(x: visibleRect.midX, y: visibleRect.midY)
         let visibleIndexPath = collectionView.indexPathForItem(at: visiblePoint)
         self.updateMovieLabel(currentItemIndex: visibleIndexPath)
 
+    }
+
+    public func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let currentVelocityX = scrollView.panGestureRecognizer.velocity(in: scrollView.superview).x
+
+        let currentVelocityXSign = Int(currentVelocityX).signum()
+        if (currentVelocityXSign != lastVelocityXSign && currentVelocityXSign != 0) {
+            lastVelocityXSign = currentVelocityXSign
+        }
     }
 }
