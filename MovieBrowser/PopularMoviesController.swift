@@ -23,6 +23,8 @@ class PopularMoviesViewModel  {
         }
     }
 
+    var lastDisplayedElementIndex = -1
+
     func loadData() {
         AppClient.shared.getPopularMovies(page: 1) { [weak self] (v: Result<PopularMoviesResult, Error>) in
             if case let .success(result) = v{
@@ -78,7 +80,10 @@ class PopularMoviesViewController : UIViewController {
     }
 
     private func updateMovieLabel(currentItemIndex indexPath: IndexPath?) {
-        guard let indexPath = indexPath else {return }
+        guard let indexPath = indexPath, viewModel.lastDisplayedElementIndex != indexPath.row else {
+            return
+        }
+        viewModel.lastDisplayedElementIndex = indexPath.row
         //scroll direction, adapt animations
         var animationDirection : CATransitionSubtype? = nil
         if (lastVelocityXSign < 0) {
