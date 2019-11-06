@@ -33,6 +33,7 @@ class PopularMovieCell: UICollectionViewCell {
         movieImage.clipsToBounds = true
         layer.cornerRadius = 0.05 * contentView.frame.width
         layer.masksToBounds = true
+        movieTitle.textColor = .primaryTextColor
     }
 
     func setContent(movieData: PopularMovie) {

@@ -30,14 +30,16 @@ class MainStyle : AppStyle {
 
 
     //MARK colors
-    let primaryColor = UIColor(red: 0.88, green: 0.25, blue: 0.98, alpha: 1.0);
-    let primaryLightColor = UIColor(red: 1.00, green: 0.47, blue: 1.00, alpha: 1.0);
-    let primaryDarkColor = UIColor(red: 0.67, green: 0.00, blue: 0.78, alpha: 1.0);
-    let primaryTextColor = UIColor(red: 0.00, green: 0.00, blue: 0.00, alpha: 1.0);
+    let primaryColor = UIColor(red: 0.53, green: 0.05, blue: 0.31, alpha: 1.0);
+    let primaryLightColor = UIColor(red: 0.74, green: 0.28, blue: 0.48, alpha: 1.0);
+    let primaryDarkColor = UIColor(red: 0.34, green: 0.00, blue: 0.15, alpha: 1.0);
+    let primaryTextColor = UIColor(red: 0.70, green: 0.92, blue: 0.95, alpha: 1.0);
     let secondaryColor = UIColor(red: 0.87, green: 0.17, blue: 0.00, alpha: 1.0);
     let secondaryLightColor = UIColor(red: 1.00, green: 0.39, blue: 0.20, alpha: 1.0);
     let secondaryDarkColor = UIColor(red: 0.64, green: 0.00, blue: 0.00, alpha: 1.0);
-    let secondaryTextColor = UIColor(red: 1.00, green: 1.00, blue: 1.00, alpha: 1.0);
+    let secondaryTextColor = UIColor(red: 1.00, green: 0.96, blue: 0.62, alpha: 1.0);
+
+
 
 
     //MARK fonts

@@ -107,7 +107,7 @@
                                 </constraints>
                                 <attributedString key="attributedText">
                                     <fragment>
-                                        <mutableString key="content">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                        <string key="content">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                         <attributes>
                                             <color key="NSColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <font key="NSFont" size="13" name="Georgia"/>
@@ -147,6 +147,7 @@
                         <outlet property="collectionView" destination="dST-FE-qf6" id="SkY-as-vfT"/>
                         <outlet property="currentMovieNameLbl" destination="xMU-w3-OZr" id="yDx-Gs-CtR"/>
                         <outlet property="currentMoviewOverview" destination="b57-cL-Pwf" id="pxF-oa-AsH"/>
+                        <outlet property="pageTitleLbl" destination="y1X-ps-V4S" id="pGD-sx-3dx"/>
                         <outlet property="starRatingView" destination="ZZE-c6-vwq" id="ISC-S2-PjE"/>
                     </connections>
                 </viewController>

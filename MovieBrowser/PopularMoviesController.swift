@@ -47,12 +47,20 @@ class PopularMoviesViewController : UIViewController {
 
     @IBOutlet weak var currentMoviewOverview: UITextView!
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var pageTitleLbl: UILabel!
     
     @IBOutlet weak var starRatingView: StarRatingView!
     var lastVelocityXSign = 0
-    
+
+    private func setupStyle() {
+        pageTitleLbl.textColor = .primaryTextColor
+        currentMovieNameLbl.textColor = .primaryTextColor
+        currentMoviewOverview.textColor = .secondaryTextColor
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupStyle()
         initCollectionView()
         viewModel.dataLoadedListener = self
         spinnner = showSpinner()
