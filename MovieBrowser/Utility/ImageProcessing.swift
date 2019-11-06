@@ -8,7 +8,7 @@ import  UIKit
 
 
 extension  UIImage {
-    func colorImageByCompletion(completionPercentage : Double = 1, activeColor: UIColor = .systemBlue, backgroundColor : UIColor = .gray) -> UIImage? {
+    func colorImageByCompletion(completionPercentage: Double = 1, activeColor: UIColor = .primaryColor, backgroundColor: UIColor = .gray) -> UIImage? {
         guard let inputCGIImage = self.cgImage, completionPercentage >= 0, completionPercentage <= 1 else { return nil }
         let colorSpace          = CGColorSpaceCreateDeviceRGB()
         let width               = inputCGIImage.width
