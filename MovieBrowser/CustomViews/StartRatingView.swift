@@ -37,6 +37,11 @@ class StarRatingView : UIStackView {
         var ratio = rating / 2
         for imgView in self.subviews {
             if let imgView = imgView as? UIImageView {
+                imgView.alpha = 0
+            }
+        }
+        for imgView in self.subviews {
+            if let imgView = imgView as? UIImageView {
 
 
                 var completionPercentage = 1.0
@@ -44,7 +49,9 @@ class StarRatingView : UIStackView {
                     completionPercentage = ratio
                 }
                 imgView.image = imgView.image?.colorImageByCompletion(completionPercentage: completionPercentage)
-                print(completionPercentage)
+                UIView.animate(withDuration: 0.3, delay: 0.1, options: .curveEaseInOut, animations: {
+                    imgView.alpha = 1
+                }, completion: nil)
                 ratio -= 1
                 ratio = max(ratio, 0)
             }
