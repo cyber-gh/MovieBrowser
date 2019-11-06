@@ -71,7 +71,7 @@ class PopularMoviesViewController : UIViewController {
     private func updateMovieLabel(currentItemIndex indexPath: IndexPath?) {
         guard let indexPath = indexPath else {return }
         
-        currentMovieNameLbl.text = viewModel.data[indexPath.row].title
+        currentMovieNameLbl.setTextAnimated(newText: viewModel.data[indexPath.row].title)
         currentMoviewOverview.text = viewModel.data[indexPath.row].overview
         starRatingView.setRating(rating: viewModel.data[indexPath.row].voteAverage!)
     }
