@@ -9,8 +9,6 @@ import UIKit
 @IBDesignable
 class StarRatingView : UIStackView {
 
-    private var starViews : [UIImageView] = []
-
     required init(coder: NSCoder) {
         super.init(coder: coder)
         addStarViews()
@@ -22,7 +20,7 @@ class StarRatingView : UIStackView {
     }
 
     private func addStarViews() {
-        for i in 0..<5 {
+        for _ in 0..<5 {
             let image = UIImage(named: "starIcon")!.withRenderingMode(.alwaysTemplate)
             let transformedImage = image.colorImageByCompletion()
             let imageView = UIImageView()
@@ -31,7 +29,6 @@ class StarRatingView : UIStackView {
             imageView.contentMode = .scaleAspectFit
 
             imageView.image = transformedImage
-            starViews.append(imageView)
             self.addArrangedSubview(imageView)
         }
     }
