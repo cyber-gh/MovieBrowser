@@ -6,7 +6,18 @@
 import Foundation
 import UIKit
 
-extension UIColor {
+protocol AppColors {
+    static var primaryColor : UIColor { get }
+    static var primaryLightColor : UIColor { get }
+    static var primaryDarkColor : UIColor { get }
+    static var primaryTextColor : UIColor { get }
+    static var secondaryColor : UIColor { get }
+    static var secondaryLightColor : UIColor { get }
+    static var secondaryDarkColor : UIColor { get }
+    static var secondaryTextColor : UIColor { get }
+}
+
+extension UIColor : AppColors {
     static let primaryColor = UIColor(red: 0.88, green: 0.25, blue: 0.98, alpha: 1.0);
     static let primaryLightColor = UIColor(red: 1.00, green: 0.47, blue: 1.00, alpha: 1.0);
     static let primaryDarkColor = UIColor(red: 0.67, green: 0.00, blue: 0.78, alpha: 1.0);
