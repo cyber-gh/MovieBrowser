@@ -23,8 +23,7 @@ class PopularMovieCell: UICollectionViewCell {
     }
 
     private func setupStyle() {
-        layer.cornerRadius = 0.05 * contentView.frame.width
-        layer.masksToBounds = true
+
         contentView.clipsToBounds = true
         movieImage.translatesAutoresizingMaskIntoConstraints = true
 
@@ -32,6 +31,8 @@ class PopularMovieCell: UICollectionViewCell {
         movieImage.frame = newImageSize
         print("setting new size", newImageSize)
         movieImage.clipsToBounds = true
+        layer.cornerRadius = 0.05 * contentView.frame.width
+        layer.masksToBounds = true
     }
 
     func setContent(movieData: PopularMovie) {
