@@ -18,8 +18,12 @@ class MoviesDetailsViewController: UIViewController {
         playerView.frame = self.view.frame
 
 
-        view.backgroundColor = .black
-        playerView.backgroundColor = .red
+        if #available(iOS 13.0, *) {
+            view.backgroundColor = .systemBackground
+        } else {
+            view.backgroundColor = .black
+        }
+
     }
 
     override func viewDidLoad() {
