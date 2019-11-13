@@ -7,6 +7,7 @@ target 'MovieBrowser' do
 
   # Pods for MovieBrowser
   pod "MaterialComponents"
+  pod 'SwifterSwift'
   pod "YoutubePlayer-in-WKWebView"
   target 'MovieBrowserTests' do
     inherit! :search_paths
