@@ -7,7 +7,7 @@ import Foundation
 import UIKit
 import YoutubePlayer_in_WKWebView
 
-class MoviesDetailsViewController: UIViewController {
+class MoviesDetailsViewController: BaseViewController {
 
     let playerView = WKYTPlayerView()
 

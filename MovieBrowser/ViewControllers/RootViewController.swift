@@ -8,4 +8,8 @@ import UIKit
 
 class RootViewController: UINavigationController {
 
+    convenience init(controller: BaseViewController) {
+        self.init(rootViewController: controller)
+    }
 }
+

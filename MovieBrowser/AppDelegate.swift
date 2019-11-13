@@ -15,14 +15,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     var window: UIWindow?
+    var rootNavigation: UINavigationController?
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
-        self.window = UIWindow(frame: UIScreen.main.bounds)
-        self.window?.rootViewController = RootViewController()
-        self.window?.makeKeyAndVisible()
-        
+        window = UIWindow(frame: UIScreen.main.bounds)
+        rootNavigation = UINavigationController()
+        rootNavigation?.pushViewController(ViewController(), animated: false)
+        window?.rootViewController = rootNavigation
+        window?.makeKeyAndVisible()
         return true
     }
 
