@@ -8,27 +8,21 @@ import UIKit
 
 class BaseViewController<ContentView: UIView>: UIViewController {
 
-    var contentView: ContentView {
-        get {
-            return (view as! ContentView)
-        }
-        set {
-
-        }
-    }
-
-    override var view: UIView! {
-        get {
-            return super.view
-        }
-        set {
-            super.view = newValue
-        }
-    }
+    var contentView: ContentView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view = ContentView()
+        contentView = ContentView()
+        contentView.frame = view.frame
+        view.addSubview(contentView)
+        if #available(iOS 13.0, *) {
+            contentView.backgroundColor = .systemBackground
+        }
+
+        if let navigationBar = navigationController?.navigationBar {
+            view.addSubview(navigationBar)
+            contentView.topAnchor.constraint(equalTo: navigationBar.topAnchor).isActive = true
+        }
     }
 }
 
