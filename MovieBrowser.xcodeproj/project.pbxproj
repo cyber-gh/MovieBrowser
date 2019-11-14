@@ -33,6 +33,7 @@
 		CA8C5C07684C8F5237B6D0E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8C52EA25F2B647A4C772F1 /* AppDelegate.swift */; };
 		CA8C5C491BD63DF30A58C708 /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8C5C98D0E06E09714CD9CF /* UILabel.swift */; };
 		CA8C5CA07C75E2F71B8B1C91 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8C5342E1182533A07B4A25 /* Colors.swift */; };
+		CA8C5CDB3CE359F7ECEDE9B3 /* UIButton+ClickListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8C5A603E9117790188A57C /* UIButton+ClickListener.swift */; };
 		CA8C5D7D9E22506CF0B56028 /* TypeConverters.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8C5A56B8DD7DD2A53C0C37 /* TypeConverters.swift */; };
 		CA8C5E53D03CDB4E1C636F8B /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8C584628AA4C5C5FA6938B /* UIViewController+Extensions.swift */; };
 		CA8C5E8336BF29BB14FE5B6C /* MovieResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8C59FB03A5769313C98B1B /* MovieResponse.swift */; };
@@ -92,6 +93,7 @@
 		CA8C59FB03A5769313C98B1B /* MovieResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieResponse.swift; sourceTree = "<group>"; };
 		CA8C5A52D7A04D696FE272BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 		CA8C5A56B8DD7DD2A53C0C37 /* TypeConverters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypeConverters.swift; sourceTree = "<group>"; };
+		CA8C5A603E9117790188A57C /* UIButton+ClickListener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+ClickListener.swift"; sourceTree = "<group>"; };
 		CA8C5AFF80A47C7925D6CC07 /* MovieDetailsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieDetailsController.swift; sourceTree = "<group>"; };
 		CA8C5B9052AC53F927C79285 /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		CA8C5C98D0E06E09714CD9CF /* UILabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
@@ -206,6 +208,7 @@
 			children = (
 				CA8C584628AA4C5C5FA6938B /* UIViewController+Extensions.swift */,
 				CA8C50042A207228D386ACD8 /* UIView+Extensions.swift */,
+				CA8C5A603E9117790188A57C /* UIButton+ClickListener.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -587,6 +590,7 @@
 				CA8C56FDABF7E7E6403B4534 /* BaseViewController.swift in Sources */,
 				CA8C52983EAFF232130F42A3 /* MainCoordinator.swift in Sources */,
 				CA8C5AE5BF4F799E0AAB9530 /* Coordinator.swift in Sources */,
+				CA8C5CDB3CE359F7ECEDE9B3 /* UIButton+ClickListener.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
