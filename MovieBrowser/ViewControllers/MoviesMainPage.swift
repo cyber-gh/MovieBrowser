@@ -7,31 +7,37 @@ import Foundation
 import UIKit
 
 
-class MoviesMainPageViewController: BaseViewController, Coordinable {
+class MoviesMainPageViewController: BaseViewController<MoviesMainPageView>, Coordinable {
     weak var coordinator: Coordinator?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         navigationItem.title = "Movie Browser"
-        view = MoviesMainPageView()
-        view.backgroundColor = .systemGray
+
     }
 
 }
 
+
 class MoviesMainPageView: UIView {
 
-    let button = UIButton()
+    var headerCollectionView: UICollectionView!
 
     private func initialize() {
-        button.setTitle("Do something", for: .normal)
-        self.addSubview(button)
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.centerXAnchor.constraint(equalTo: self.centerXAnchor, constant: 0.0).isActive = true
-        button.centerYAnchor.constraint(equalTo: self.centerYAnchor, constant: 0.0).isActive = true
+        let layout = UICollectionViewFlowLayout()
+        layout.itemSize = CGSize(width: 100.0, height: 100.0)
+        headerCollectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: layout)
+        self.addSubview(headerCollectionView)
 
+        headerCollectionView.translatesAutoresizingMaskIntoConstraints = false
 
+        headerCollectionView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 0.0).isActive = true
+        headerCollectionView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 0.0).isActive = true
+        headerCollectionView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor).isActive = true
+        headerCollectionView.heightAnchor.constraint(equalToConstant: 300.0).isActive = true
+
+        headerCollectionView.backgroundColor = .red
     }
 
 

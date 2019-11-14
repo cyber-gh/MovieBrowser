@@ -76,8 +76,8 @@ class PopularMoviesViewController : UIViewController {
     }
 
     @objc func openDetailsController(sender: UITapGestureRecognizer) {
-        let detailsViewController = MoviesDetailsViewController()
-        self.present(detailsViewController, animated: true)
+        //let detailsViewController = MoviesDetailsViewController()
+//        self.present(detailsViewController, animated: true)
     }
 
     private func initCollectionView() {
