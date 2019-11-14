@@ -6,9 +6,9 @@
 import Foundation
 import UIKit
 
-class RootViewController: UINavigationController {
+class BaseNavigationController: UINavigationController {
 
-    convenience init(controller: BaseViewController) {
+    convenience init(with controller: BaseViewController) {
         self.init(rootViewController: controller)
     }
 }

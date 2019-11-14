@@ -13,18 +13,19 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
-
+    var coordinator: MainCoordinator?
     var window: UIWindow?
-    var rootNavigation: UINavigationController?
-
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
+        let navController = BaseNavigationController()
+        coordinator = MainCoordinator(navigationController: navController)
+        coordinator?.start()
+
         window = UIWindow(frame: UIScreen.main.bounds)
-        rootNavigation = UINavigationController()
-        rootNavigation?.pushViewController(ViewController(), animated: false)
-        window?.rootViewController = rootNavigation
+        window?.rootViewController = navController
         window?.makeKeyAndVisible()
+
         return true
     }
 
