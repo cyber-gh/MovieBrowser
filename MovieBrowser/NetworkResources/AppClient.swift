@@ -102,6 +102,7 @@ class AppClient {
                 return
             }
             let decoder = JSONDecoder()
+            //decoder.keyDecodingStrategy = .convertFromSnakeCase
 
             let popularMoviesResult = try? decoder.decode(PopularMoviesResult.self, from: data)
 
